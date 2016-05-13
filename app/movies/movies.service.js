@@ -5,7 +5,7 @@
     .module('movieApp')
     .service('MovieService', MovieService);
 
-  MovieService.$inject = [$http]
+  MovieService.$inject = ['$http'];
 
   function MovieService($http) {
     return {

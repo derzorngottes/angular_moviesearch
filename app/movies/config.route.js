@@ -1,21 +1,21 @@
 (function() {
   angular
-    .module('movieApp');
+    .module('movieApp')
     .config(config);
 
   config.$inject = ['$routeProvider'];
 
   function config($routeProvider) {
     $routeProvider
-      .when('/home', {
+      .when('/', {
         templateUrl: 'landing/landing.html',
-        controllerAs: 'homeCtrl',
-        controller: 'homeCtrl'
+        controllerAs: 'movies',
+        controller: 'Movies'
       })
       .when('/movie', {
         templateUrl: 'movies/movie_detail.html',
-        controllerAs: 'movieCtrl',
-        controller: 'movieCtrl'
+        controllerAs: 'movies',
+        controller: 'Movies'
       })
       .otherwise({
         redirectTo: 'landing/landing.html'
