@@ -3,22 +3,29 @@
     .module('movieApp')
     .config(config);
 
-  config.$inject = ['$routeProvider'];
+  config.$inject = ['$routeProvider']
 
   function config($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'landing/landing.html',
+        templateUrl: 'app/landing/landing.html',
+        controllerAs: 'movies',
+        controller: 'Movies'
+      })
+      .when('/movies', {
+        templateUrl: 'movies/movies.html',
         controllerAs: 'movies',
         controller: 'Movies'
       })
       .when('/movie', {
-        templateUrl: 'movies/movie_detail.html',
+        templateUrl: '/movies/movie_detail.html',
         controllerAs: 'movies',
         controller: 'Movies'
       })
       .otherwise({
-        redirectTo: 'landing/landing.html'
+        templateUrl: '/landing/landing.html',
+        controllerAs: 'movies',
+        controller: 'Movies'
       });
   }
-});
+})();
