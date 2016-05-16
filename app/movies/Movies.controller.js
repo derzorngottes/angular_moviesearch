@@ -10,10 +10,13 @@
   function Movies(MovieService) {
     var vm = this;
 
-    MovieService.getMovies().then(function(movies) {
-      vm.movies = movies.data;
-    }).catch(function(err) {
-      vm.errors = err;
-    });
+    vm.getMovies = function(title) {
+      MovieService.getMovies(title).then(function(movies) {
+        console.log(movies);
+        vm.movies = movies.data;
+      }).catch(function(err) {
+        vm.errors = err;
+      });
+    }
   }
 })();

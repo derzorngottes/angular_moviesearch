@@ -9,7 +9,7 @@
 
   function MovieService($http) {
     return {
-      getMovies: function() {
+      getMovies: function(title) {
         return $http.get('http://www.omdbapi.com/?t=' + title)
       }
     };
