@@ -12,7 +12,6 @@
 
     vm.getMovies = function(title) {
       MovieService.getMovies(title).then(function(movies) {
-        console.log(movies);
         vm.movies = movies.data;
       }).catch(function(err) {
         vm.errors = err;

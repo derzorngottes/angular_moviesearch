@@ -4,4 +4,12 @@
   <form action='javascript:void(0)' ng-submit='movies.getMovies(movieTitle)'
   <p><input type='text' ng-model='movieTitle'></p>
   <p><button>Search!</button></p>
+  <div class='movies-container' ng-show='movies.movies'>
+    <div class='search-results' ng-repeat='movie in movies.movies.Search'>
+      <div class='movie-tab'>
+        <p class='title'>{{ movie.Title }}</p>
+        <p class='year'>year: {{ movie.Year }}</p>
+      </div>
+    </div>
+  </div>
 </div>
