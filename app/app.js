@@ -2,7 +2,7 @@
   'use strict'
 
   angular
-    .module('movieApp', ['ngRoute'])
+    .module('movieApp', ['ngRoute', 'movieFilters'])
     .config(config);
 
   config.$inject = ['$locationProvider'];

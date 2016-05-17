@@ -1,7 +1,7 @@
 <div class='showContainer'>
   <p>{{ movie.movie.Title }}</p>
   <p>{{ movie.movie.Year }}</p>
-  <p ng-src='{{movie.movie.Poster}}'></p>
+  <img ng-src='{{movie.movie.Poster | trustUrl}}' />
 
   <a ng-href='/home'>back</a>
 </div>
