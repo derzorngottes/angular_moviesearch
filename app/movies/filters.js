@@ -1,4 +1,4 @@
-angular.module('movieFilters', []).filter('trustUrl', function() {
+angular.module('movieFilters', [$sce]).filter('trustUrl', function($sce) {
   return function(url) {
     return $sce.trustAsResourceUrl(url);
   };
