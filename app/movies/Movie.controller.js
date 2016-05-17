@@ -13,8 +13,8 @@
     MovieService.getMovie($routeParams.id).then(function(movie) {
       vm.movie = movie.data;
     })
-    .catch(err).then(function(err) {
-      vm.error = err;
+    .catch(function(err) {
+      vm.errors = err;
     });
   }
 })();
