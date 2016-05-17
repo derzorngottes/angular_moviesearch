@@ -12,18 +12,13 @@
         controllerAs: 'movies',
         controller: 'Movies'
       })
-      .when('/movies', {
-        templateUrl: 'movies/movies.html',
-        controllerAs: 'movies',
-        controller: 'Movies'
-      })
-      .when('/movie', {
-        templateUrl: '/movies/movie_detail.html',
+      .when('/movie/:name/view', {
+        templateUrl: 'app/movies/movie.html',
         controllerAs: 'movies',
         controller: 'Movies'
       })
       .otherwise({
-        templateUrl: '/landing/landing.html',
+        templateUrl: 'app/landing/landing.html',
         controllerAs: 'movies',
         controller: 'Movies'
       });
