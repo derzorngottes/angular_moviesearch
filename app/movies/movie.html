@@ -1,7 +1,7 @@
 <div class='showContainer'>
-  <p>Title: {{ movie.Title }}</p>
-  <p>Year: {{ movie.Year }}</p>
-  <p>{{ movie.movie }}</p>
-  <br>
-  <p>title {{ movie.movie.Title }}</p>
+  <p>{{ movie.movie.Title }}</p>
+  <p>{{ movie.movie.Year }}</p>
+  <p ng-src='{{movie.movie.Poster}}'></p>
+
+  <a ng-href='/'></a>
 </div>
