@@ -14,8 +14,8 @@
       })
       .when('/movie/:name/view', {
         templateUrl: 'app/movies/movie.html',
-        controllerAs: 'movies',
-        controller: 'Movies'
+        controllerAs: 'movie',
+        controller: 'Movie'
       })
       .otherwise({
         templateUrl: 'app/landing/landing.html',
