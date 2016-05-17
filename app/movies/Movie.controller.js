@@ -5,17 +5,17 @@
     .module('movieApp')
     .controller('Movie', Movie);
 
-  Movie.$inject = ['MovieService'];
+  Movie.$inject = ['$location', '$routeParams', 'MovieService'];
 
-  function Movie(MovieService) {
+  function Movie($location, $routeParams, MovieService) {
     var vm = this;
 
-    vm.getMovie = function(selectTitle) {
-      MovieService.getMovie(selectTitle).then(function(movie) {
-        vm.movie = movie.data;
-      }).catch(function(err) {
-        vm.errors = err;
-      });
-    }
+    MovieService.getMovie($route.current.params.id).then(function(movie) {
+      vm.movie = movie.data;
+    })
+    .catch(err).then(function(err) {
+      console.log(err);
+      vm.error = err;
+    });
   }
 })();

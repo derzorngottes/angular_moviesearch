@@ -13,7 +13,7 @@
   <div class='movies-container' ng-show='movies.movies'>
     <div class='search-results' ng-repeat='movie in movies.movies.Search'>
       <div class='movie-tab'>
-        <p class='title'><a ng-href='/movie/{{movie.Title}}/view'>{{ movie.Title }}</a></p>
+        <p class='title'><a ng-href='/movie/{{movie.imdbID}}/view'>{{ movie.Title }}</a></p>
         <p class='year'>year: {{ movie.Year }}</p>
       </div>
     </div>

@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+
   angular
     .module('movieApp')
     .config(config);
@@ -12,7 +14,7 @@
         controllerAs: 'movies',
         controller: 'Movies'
       })
-      .when('/movie/:name/view', {
+      .when('/movie/:id/view', {
         templateUrl: 'app/movies/movie.html',
         controllerAs: 'movie',
         controller: 'Movie'

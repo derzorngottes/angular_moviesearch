@@ -12,8 +12,8 @@
       getMovies: function(title) {
         return $http.get('http://www.omdbapi.com/?s=' + title)
       },
-      getMovie: function(selectTitle) {
-        return $http.get('http://www.omdbapi.com/?t=' + selectTitle)
+      getMovie: function(id) {
+        return $http.get('http://www.omdbapi.com/?i=' + id)
       }
     };
   }
